@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean id="template" class="edu.handong.babgo.database.DataStoreTemplate"/>
+	
+	<bean id="partnerDao" class="edu.handong.babgo.dao.PartnerDaoImpl">
+		<property name="template" ref="template"/>
+	</bean>
+	
+	<bean id="dayDao" class="edu.handong.babgo.dao.DayDaoImpl">
+		<property name="partnerDao" ref="partnerDao" />
+	</bean>
+	
+	<bean id="userDao" class="edu.handong.babgo.dao.UserDaoImpl">
+		<property name="template" ref="template"/>
+	</bean>
+	
+	<bean id="scheduleDao" class="edu.handong.babgo.dao.ScheduleDaoImpl">
+		<property name="dayDao" ref="dayDao"/>
+	</bean>
+	
+	<bean id="messageDao" class="edu.handong.babgo.dao.MessageDaoImpl">
+		<property name="template" ref="template"/>
+	</bean>
+	
+	<bean id="convertor" class="edu.handong.babgo.util.Convertor"></bean>
+	
+	<bean id="todaysService" class="edu.handong.babgo.todays.TodaysServiceImpl">
+		<property name="dayDao" ref="dayDao"/>
+	</bean>
+	
+	<bean id="settingsService" class="edu.handong.babgo.settings.SettingsServiceImpl">
+		<property name="scheduleDao" ref="scheduleDao"/>
+		<property name="userDao" ref = "userDao"/>
+	</bean>
+	
+	<bean id="searchService" class="edu.handong.babgo.search.SearchServiceImpl">
+		<property name="scheduleDao" ref="scheduleDao"/>
+		<property name="userDao" ref="userDao"/>
+	</bean>
+	
+	<bean id="randomService" class="edu.handong.babgo.random.RandomServiceImpl">
+		<property name="userDao" ref="userDao"/>
+	</bean>
+	
+	<bean id="messageService" class="edu.handong.babgo.message.MessageServiceImpl">
+		<property name="messageDao" ref="messageDao"/>
+		<property name="userDao" ref="userDao"/>
+		<property name="scheduleDao" ref="scheduleDao"/>
+	</bean>
+	
+	<bean id="homeService" class="edu.handong.babgo.HomeService">
+		<property name="messageDao" ref="messageDao"/>
+		<property name="partnerDao" ref="partnerDao"/>
+		<property name="userDao" ref="userDao"/>
+		<property name="scheduleDao" ref="scheduleDao"/>
+	</bean>
+</beans>

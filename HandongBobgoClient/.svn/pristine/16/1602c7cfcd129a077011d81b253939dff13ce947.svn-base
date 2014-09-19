@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"  >
+	<TextView
+	    android:id="@+id/scheduleName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:text="Large Text"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:layout_width="match_parent"
+	 android:layout_height="30dp"
+	 android:orientation="horizontal" 
+     android:background="#0095b6" >
+	 
+	
+	<RelativeLayout
+	    android:layout_width="30dp"
+	    android:layout_height="fill_parent"
+	    android:gravity="center" >
+	
+	    <TextView
+	        android:id="@+id/dayofweek"
+	        android:layout_width="fill_parent"
+	        android:layout_gravity="center"
+	        android:layout_height="wrap_content"
+	        android:textSize="14dp"
+	        android:textColor="#FFFFFF"
+	        android:text="요일" />
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="3"
+	    android:gravity="center" >
+	
+	    <TextView
+	        android:id="@+id/breakfast"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="14dp" 
+	        android:textColor="#FFFFFF"
+	        android:text="아침"/>
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="3"
+	    android:gravity="center" >
+	
+	    <TextView
+	        android:id="@+id/lunch"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="14dp" 
+	        android:textColor="#FFFFFF"
+	        android:text="점심"/>
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="3"
+	    android:gravity="center" >
+	
+	    <TextView
+	        android:id="@+id/dinner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="14dp" 
+	        android:textColor="#FFFFFF"
+	        android:text="저녁"/>
+	</RelativeLayout>
+	
+	</LinearLayout>
+    
+  
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scheduleName" >
+    </ListView>
+
+</LinearLayout>

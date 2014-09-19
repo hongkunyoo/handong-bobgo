@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Bobgo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">BobGo</string>
+    <string name="title_activity_menu_select">MenuSelect</string>
+    <string name="copyright">Copyright @ Crocodile team. All Rights Reserved</string>
+    <string name="title_activity_friend_matching">FriendMatching</string>
+    <string name="title_activity_friend_schedule_view">FriendScheduleView</string>
+    <string name="title_activity_">A</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="idText">Hisnet ID</string>
+    <string name="pwText">Password</string>
+    <string name="PhnumText">Phone Number</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_set_appointment">SetAppointment</string>
+    <string name="setApp">약속설정</string>
+    <string name="mon">월</string>
+    <string name="tue">화</string>
+    <string name="wed">수</string>
+    <string name="thu">목</string>
+    <string name="fri">금</string>
+    <string name="sat">토</string>
+    <string name="sun">일</string>
+    <string name="space">" "</string>
+    <string name="one">1</string>
+    <string name="morn">아침</string>
+    <string name="lunch">점심</string>
+    <string name="din">저녁</string>
+    <string name="searchMessage">이름을 입력해 주세요</string>
+
+</resources>

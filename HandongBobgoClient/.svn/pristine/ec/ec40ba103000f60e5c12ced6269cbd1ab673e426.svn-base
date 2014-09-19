@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Bobgo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">BobGo</string>
+    <string name="title_activity_menu_select">MenuSelect</string>
+    <string name="copyright">Copyright @ Crocodile team. All Rights Reserved</string>
+    <string name="title_activity_friend_matching">FriendMatching</string>
+
+</resources>
